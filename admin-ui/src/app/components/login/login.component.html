@@ -1,0 +1,42 @@
+<div class="container">
+  <!-- <h1 class="bold header">Lägg till ny kampanj</h1> -->
+  
+    <h1 class="login_header">Login</h1>
+
+  <div class="form">
+    <form (ngSubmit)="login(form)" [formGroup]="form">
+      <label>
+        <h4 class="bold">Username</h4>
+        <input
+          [class.error]="usernameControl.invalid && submitted || error"
+          class="form__input"
+          formControlName="username"
+          type="text"
+        />
+        <div *ngIf="usernameControl.invalid && submitted" class="form__error">
+          <p>Username required</p>
+        </div>
+      </label>
+
+      <label>
+        <h4 class="bold">Password</h4>
+        <input
+          [class.error]="passwordControl.invalid && submitted || error"
+          class="form__input"
+          formControlName="password"
+          type="password"
+        />
+        <div *ngIf="passwordControl.invalid && submitted" class="form__error">
+          <p>Password required</p>
+        </div>
+        <div *ngIf="error && !(passwordControl.invalid && submitted)" class="form__error">
+          <p>Password invalid</p>
+        </div>
+      </label>
+
+      <div class="form__submit">
+        <button class="btn " type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

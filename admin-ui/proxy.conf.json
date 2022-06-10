@@ -1,0 +1,10 @@
+{
+    "/api/v1": {
+      "target": "https://sbf-dev-agent.frendsapp.com",
+      "secure": true,
+      "pathRewrite": {
+      "^/api/v1": ""
+    },
+      "changeOrigin": true
+    }
+}

@@ -1,0 +1,6 @@
+[submodule "admin-ui"]
+	path = admin-ui
+	url = https://github.com/vladilins/admin-ui.git
+[submodule "admin-api"]
+	path = admin-api
+	url = https://github.com/vladilins/admin-api.git

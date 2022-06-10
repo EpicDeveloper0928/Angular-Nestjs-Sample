@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 class="bold sbf-w header">Active campaigns</h1>
+
+    <div *ngFor="let add of ads">
+        <div class="add">
+            <div class="card">
+                <a href="{{ add.url }}" target="blank">
+                    <img class="card-img" src="{{ add.imageUrl }}" alt="card image"/>
+                </a>
+                <div class="card-body">
+                    <div class="card-text">
+                        <p class="italic title">{{ add.title }}</p>
+                        <p class="text">{{ add.text }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="icons">
+                <!-- <img (click)="moveDown(add)" alt="moveUp" class="icon mr-r " src="assets/moveUp.png"/>
+                <img (click)="moveUp(add)" alt="moveDown" class="mr-r icon" src="assets/moveDown.png"/> -->
+                <img (click)="deleteAdd(add._id)" alt="delete" class="icon mr-r" src="assets/delete.png"/>
+                <img (click)="updateAdd(add)" alt="delete" class="icon" src="assets/edit.png" style="width: 32px"/>
+            </div>
+        </div>
+    </div>
+</div>

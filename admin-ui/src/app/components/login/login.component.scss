@@ -1,0 +1,174 @@
+.container {
+  margin: 10rem auto;
+  width: 500px;
+  color: rgb(72, 72, 72);
+}
+
+#textarea {
+  height: 157px;
+  margin-bottom: -5px;
+}
+
+#option {
+  font-size: 12px;
+}
+
+.mt {
+  margin-top: 35px !important;
+}
+
+.form {
+  ::ng-deep pizza-display {
+    margin: 0 0 35px;
+  }
+
+  h4 {
+    margin: 0 0 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  label {
+    margin: 0 0 35px;
+    display: block;
+  }
+  &__error {
+    padding: 5px 10px;
+    border-radius: 0 0 4px 4px;
+    display: flex;
+    align-items: center;
+    background: #aa141b;
+    border: 1px solid #aa141b;
+    width: 100%;
+    color: #fff;
+    p {
+      font: {
+        size: 14px;
+      }
+      margin: 0;
+    }
+  }
+  &__input {
+    height: 28px;
+    border: 0;
+    margin: 0;
+    padding: 10px;
+    outline: 0;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 20px;
+    background: white;
+    border: 1px solid transparent;
+    box-shadow: inset 0px 0px 0px 1px rgb(204, 204, 204);
+    &.error {
+      border-radius: 4px 4px 0 0;
+      border-color: #aa141b;
+    }
+    &.error:last-child {
+      border-radius: 4px;
+    }
+  }
+
+  &__upload {
+    display: flex;
+    margin-top: -20px;
+  }
+
+  &__upload-btn {
+    border: 1px solid gray;
+    height: 48px;
+    width: 240px;
+    background-color: #f7f5f2;
+    font-size: 15px;
+    outline: none;
+    margin-right: 30px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    color: rgb(72, 72, 72);
+  }
+
+  &__upload-btn:hover {
+    cursor: pointer;
+  }
+
+  #imgName {
+    margin-right: -20px;
+    width: 669px;
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      margin-right: -20px;
+      width: 150px;
+      background-color: rgb(68, 68, 68);
+      color: #fff;
+      outline: none;
+      font-size: 15px;
+      padding: 20px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__actions {
+    margin: 35px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+  &__list {
+    margin: -20px 0 0;
+  }
+}
+
+.select-style {
+  border: 1px solid gray;
+  width: 120px;
+  border-radius: 3px;
+  overflow: hidden;
+  max-height: 48px;
+  height: 48px;
+}
+
+.select-style select {
+  padding: 14px;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  border-radius: 2px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 18px;
+
+  background-image: url("../../../assets/select.png");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 20px auto, 100%;
+}
+
+.select-style select:focus {
+  outline: none;
+}
+
+.select-style select option {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

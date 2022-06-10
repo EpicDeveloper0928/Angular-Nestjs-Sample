@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  height: 100vh;
+}
+
+.left {
+  padding: 73px;
+  grid-column: 1;
+  background-color: rgb(68, 68, 68);
+}
+
+.right {
+  padding: 73px;
+  grid-column: 2;
+  background-color: rgb(247, 245, 242);
+}

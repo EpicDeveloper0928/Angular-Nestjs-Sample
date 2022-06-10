@@ -1,0 +1,12 @@
+<nav class="nav">
+    
+    <div
+        class="links">
+        <a class="logo" [routerLink]="[ '/' ]">ADS-ADMIN</a>
+        <span *ngIf="!isLogedIn()">
+            <a [routerLink]="[ '/login' ]" class="link mr">Login</a>
+            <a [routerLink]="[ '/register' ]" class="link mr">Register</a>
+        </span>
+        <a (click)="logout()" *ngIf="isLogedIn()" [routerLink]="[ '/' ]" class="link">Logout</a>
+    </div>
+</nav>

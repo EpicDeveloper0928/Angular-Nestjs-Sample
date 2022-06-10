@@ -1,0 +1,66 @@
+.container {
+  float: right;
+  width: 500px;
+  color: rgb(34, 34, 34);
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.add {
+  width: 353px;
+  // height: 228px;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.card-img {
+  width: 353px;
+  height: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-body {
+  background-color: white;
+  margin-top: -10px;
+
+  border-radius: 0 0 5px 5px;
+  width: 353px;
+}
+
+.card-text {
+  padding: 25px;
+  .title {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.icons {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  margin-left: 15px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.mr-r {
+  margin-right: 5px;
+}

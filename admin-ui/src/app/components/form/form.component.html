@@ -1,0 +1,152 @@
+<div class="container">
+  <h1 class="bold header">Add new campaign</h1>
+
+  <div class="form">
+    <form [formGroup]="form" (ngSubmit)="createAdd(form)">
+      <label>
+        <h4 class="bold">Campaign heading</h4>
+        <input
+          [class.error]="
+            nameControl.invalid &&
+            (nameControl.dirty || nameControl.touched || submitted)
+          "
+          class="form__input"
+          formControlName="title"
+          type="text"
+        />
+        <div
+          *ngIf="
+            nameControl.invalid &&
+            (nameControl.dirty || nameControl.touched || submitted)
+          "
+          class="form__error"
+        >
+          <p>Must be filled</p>
+        </div>
+      </label>
+
+      <label>
+        <h4 class="bold">Text</h4>
+        <textarea
+          [class.error]="
+            textControl.invalid &&
+            (textControl.dirty || textControl.touched || submitted)
+          "
+          class="form__input"
+          formControlName="text"
+          id="textarea"
+          type="text"
+        ></textarea>
+        <div
+          *ngIf="
+            textControl.invalid &&
+            (textControl.dirty || textControl.touched || submitted)
+          "
+          class="form__error"
+        >
+          <p>Must be filled</p>
+        </div>
+      </label>
+
+      <label>
+        <h4 class="bold">Link</h4>
+        <input
+          [class.error]="
+            linkControl.invalid &&
+            (linkControl.dirty || linkControl.touched || submitted)
+          "
+          class="form__input"
+          formControlName="url"
+          type="text"
+        />
+        <div
+          *ngIf="
+            linkControl.invalid &&
+            (linkControl.dirty || linkControl.touched || submitted)
+          "
+          class="form__error"
+        >
+          <p>Invalid link</p>
+        </div>
+      </label>
+
+      <!-- <label>
+        <h4 class="bold">LADDA UPP BILD</h4>
+        <input
+          [class.error]="
+            imageControl.invalid &&
+            (imageControl.dirty || imageControl.touched || submitted)
+          "
+          class="form__input"
+          formControlName="imageUrl"
+          type="text"
+        />
+        <div
+          *ngIf="
+            imageControl.invalid &&
+            (imageControl.dirty || imageControl.touched || submitted)
+          "
+          class="form__error"
+        >
+          <p>Länken är ogiltig</p>
+        </div>
+      </label> -->
+
+      <label>
+        <h4 class="bold">UPLOAD</h4>
+      </label>
+      <div class="form__upload">
+        <button (click)="openFileBrowser($event)" class="form__upload-btn">
+          Browse
+        </button>
+        <input
+          [class.error]="!fileName && submitted"
+          placeholder="Select a file"
+          class="form__input"
+          id="imgName"
+          readonly
+          type="text"
+          [value]="fileName ? fileName : ''"
+        />
+      </div>
+
+      <input
+        
+        (change)="imageChange($event)"
+        accept=".gif,.jpg,.jpeg,.png"
+        id="imageBrowser"
+        style="display: none;"
+        type="file"
+      />
+
+      <h4 class="bold mt">PLACING</h4>
+
+      <div class="form__submit">
+        <!-- <div class="select-style">
+          <select formControlName="order">
+            <option *ngFor="let order of places" [ngValue]="order">
+              {{ order }}
+            </option>
+          </select>
+        </div> -->
+
+        <div class="select-style">
+          <input
+            [class.error]="
+              placeControl.invalid &&
+              (placeControl.dirty || placeControl.touched || submitted)
+            "
+            class="form__input"
+            formControlName="order"
+            oninput="validity.valid||(value='');"
+            min="1"
+            type="number"
+          />
+        </div>
+        <button type="submit" class="btn bold">PUBLISH</button>
+      </div>
+
+      <!-- <ng-content></ng-content> -->
+    </form>
+  </div>
+</div>
